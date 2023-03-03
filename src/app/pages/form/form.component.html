@@ -1,0 +1,61 @@
+<form #f="ngForm" [formGroup]="userprofileForm" (ngSubmit)="onSubmit()">
+
+    <label>
+        First Name: 
+        <input type="text" formControlName="firstName">
+    </label><br><br>
+
+    <label>
+        Last Name: 
+        <input type="text" formControlName="lastName">
+    </label><br><br>
+
+    <div formGroupName="address">
+        <label>
+            Address 1: 
+            <input type="text" formControlName="address1">
+        </label><br><br>
+
+        <label>
+            Address 2: 
+            <input type="text" formControlName="address2">
+        </label><br><br>
+
+        <label>
+            State: 
+            <input type="text" formControlName="state">
+        </label><br><br>
+
+        <label>
+            Zip Code: 
+            <input type="text" formControlName="zip">
+        </label><br><br>
+    </div>
+
+    <label>
+        Email: 
+        <input type="text" formControlName="email">
+    </label><br><br>
+
+    <label>
+        Phone Number: 
+        <input type="text" formControlName="phoneNo">
+    </label><br><br>
+
+    <div formControlName="department">
+        Departments: 
+        <input type="radio" id="IT" formControlName="department" value="IT">
+        <label for="IT">IT</label>
+        <input type="radio" id="paper" formControlName="department" value="paper">
+        <label for="paper">Paper</label>
+        <input type="radio" id="hydro" formControlName="department" value="hydro">
+        <label for="hydro">Hydro</label>
+        <input type="radio" id="turbo" formControlName="department" value="turbo">
+        <label for="turbo">Turbo</label>
+    </div><br><br>
+
+    <button type="submit" [disabled]="!userprofileForm.valid">
+        Submit  
+    </button>
+</form >
+<!-- {{userprofileForm.value | json}} -->

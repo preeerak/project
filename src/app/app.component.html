@@ -1,0 +1,60 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  <button mat-button class="recruit" routerLink="/home">
+    <span>RECRUIT</span>
+  </button>
+  <hr>
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <span class="voith">VOITH</span>
+    </div>
+  </nav>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8"> 
+    
+    <button mat-button class="menu-button" routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/preparing">
+      <span>Preparing</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/sourcing">
+      <span>Sourcing</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/screening">
+      <span>Screening</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/selecting">
+      <span>Selecting</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/hiring">
+      <span>Hiring</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" routerLink="/onboarding">
+      <span>Onboarding</span>
+    </button>
+    <mat-divider></mat-divider>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z4">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

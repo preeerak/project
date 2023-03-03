@@ -1,0 +1,20 @@
+button{
+    width: 250px;
+    height: 250px;
+    font-size: 30px;
+    font-weight: 550;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: rgb(66, 89, 203);
+}
+button:hover{
+    box-shadow: 0 15px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+}
+mat-icon{
+    height: 25px;
+    width: 25px;
+    transform: scale(1.5);
+}
